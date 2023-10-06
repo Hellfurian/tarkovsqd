@@ -1,16 +1,14 @@
-
-
 import create from 'zustand'
 
 const useFilterStore = create(set => ({
-    map: null,
-    setMap: (object) => set(() => ({ map: object === "맵 선택" ? null : object})),
+     map: null,
+     setMap: (object) => set(() => ({ map: object === "Select map" ? null : object})),
 
-    server: null,
-    setServer: (object) => set(() => ({server: object === "서버 선택" ? null : object})),
+     server: null,
+     setServer: (object) => set(() => ({server: object === "Select Server" ? null : object})),
 
-    type: null,
-    setType: (object) => set(() => ({type: object === "플레이 유형" ? null : object}))
+     type:null,
+     setType: (object) => set(() => ({type: object === "Play Type" ? null : object}))
 }))
 
 export default useFilterStore
